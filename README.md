@@ -2,7 +2,17 @@
 
 This is a workflow that runs hourly to harvest all channels specified in a list of channels. There is also an EventBridge trigger that initiates a harvest when a MediaLive Channel is stopped
 
-![Workflow Diagram](./workflow_diagram.png)
+![Workflow Diagram](./documentation/images/workflow_diagram.png)
+
+## Hourly Harvest Workflow
+This workflow iterates over all channels stored in the configuration and creates a harvest job for the past hour.
+
+![Hourly Workflow Graph](./documentation/images/hourly_workflow_graph.png)
+
+## AdHoc Harvest Workflow
+This workflow acts on the incoming MediaLive event from EventBridge and creates a harvest job for the current hour.
+
+![Hourly Workflow Graph](./documentation/images/adhoc_workflow_graph.png)
 
 ## Instructions
 
