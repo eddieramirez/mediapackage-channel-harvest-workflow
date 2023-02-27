@@ -1,4 +1,4 @@
-# MediaPackage Harvest Workflow
+# MediaPackage Channel Harvest Workflow
 
 This is a workflow that runs hourly to harvest all channels specified in a list of channels. There is also an EventBridge trigger that initiates a harvest when a MediaLive Channel is stopped
 
