@@ -4,12 +4,15 @@ This is a workflow that runs hourly to harvest all channels specified in a list 
 
 ![Workflow Diagram](./documentation/images/workflow_diagram.png)
 
-## Hourly Harvest Workflow
+## Step Function State Machine
+![Workflow Diagram](./documentation/images/workflow_graph.png)
+
+### Hourly Harvest Workflow
 This workflow iterates over all channels stored in the configuration and creates a harvest job for the past hour.
 
 ![Hourly Workflow Graph](./documentation/images/hourly_workflow_graph.png)
 
-## AdHoc Harvest Workflow
+### AdHoc Harvest Workflow
 This workflow acts on the incoming MediaLive event from EventBridge and creates a harvest job for the current hour.
 
 ![Hourly Workflow Graph](./documentation/images/adhoc_workflow_graph.png)
