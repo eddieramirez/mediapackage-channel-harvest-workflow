@@ -8,8 +8,12 @@ export async function handler(event, context) {
     const eventTime = event.time;
     const harvestJobStartTime = new Date(eventTime);
     const harvestJobStopTime = new Date(eventTime);
-    const timePath = `${harvestJobStartTime.getFullYear()}/${harvestJobStartTime.getMonth() + 1}/${harvestJobStartTime.getDate()}/${harvestJobStartTime.getHours()}`;
-    const timeString = `${harvestJobStartTime.getFullYear()}${harvestJobStartTime.getMonth() + 1}${harvestJobStartTime.getDate()}${harvestJobStartTime.getHours()}`;
+    const timeYear= harvestJobStartTime.getFullYear();
+    const timeMonth = String(harvestJobStartTime.getMonth() + 1).padStart(2, '0');
+    const timeDay = String(harvestJobStartTime.getDate()).padStart(2, '0');
+    const timeHour = String(harvestJobStartTime.getHours()).padStart(2, '0');
+    const timePath = `${timeYear}/${timeMonth}/${timeDay}/${timeHour}`;
+    const timeString = `${timeYear}${timeMonth}${timeDay}${timeHour}`;
 
     let harvestId;
     let harvestChannelName;
